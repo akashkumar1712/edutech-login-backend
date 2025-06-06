@@ -5,7 +5,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 # Copy the jar file from target folder to the container
-COPY target/*.jar app.jar
+COPY target/LoginSignUp-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose port 8080 (or whatever your app uses)
 EXPOSE 1010
