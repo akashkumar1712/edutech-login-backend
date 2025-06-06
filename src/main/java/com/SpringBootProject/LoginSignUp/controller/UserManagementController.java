@@ -29,12 +29,13 @@ public class UserManagementController {
 
     @PostMapping("/auth/register")
     public ApiResponse<String> register(@RequestBody RegistrationRequest reg){
+        log.info("Started registering..");
         return usersManagementService.register(reg);
     }
 
     @PostMapping("/auth/login")
     public ApiResponse<LoginResponse> login(@RequestBody LoginRequest req){
-        log.info("Started login details");
+        log.info("Started login details..");
         return usersManagementService.login(req);
     }
 
