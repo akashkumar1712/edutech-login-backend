@@ -10,6 +10,7 @@ import com.SpringBootProject.LoginSignUp.dto.response.UserDtoListResponse;
 import com.SpringBootProject.LoginSignUp.entity.User;
 import com.SpringBootProject.LoginSignUp.service.UsersManagementService;
 import com.SpringBootProject.LoginSignUp.utils.ApiResponse;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -21,6 +22,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*")
+@Slf4j
 public class UserManagementController {
     @Autowired
     private UsersManagementService usersManagementService;
@@ -32,6 +34,7 @@ public class UserManagementController {
 
     @PostMapping("/auth/login")
     public ApiResponse<LoginResponse> login(@RequestBody LoginRequest req){
+        log.info("Started login details");
         return usersManagementService.login(req);
     }
 
