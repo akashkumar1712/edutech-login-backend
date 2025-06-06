@@ -1,0 +1,4 @@
+package com.SpringBootProject.LoginSignUp.config;
+
+public class CorsConfig {
+}
