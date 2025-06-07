@@ -35,7 +35,7 @@ public class UserManagementController {
 
     @PostMapping("/auth/login")
     public ApiResponse<LoginResponse> login(@RequestBody LoginRequest req){
-        log.info("Started login details..");
+        log.info("Started login details..---");
         return usersManagementService.login(req);
     }
 
