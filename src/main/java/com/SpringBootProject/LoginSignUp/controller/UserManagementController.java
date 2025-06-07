@@ -29,7 +29,7 @@ public class UserManagementController {
 
     @PostMapping("/auth/register")
     public ApiResponse<String> register(@RequestBody RegistrationRequest reg){
-        log.info("Started registering..");
+        log.info("Started registering......");
         return usersManagementService.register(reg);
     }
 
