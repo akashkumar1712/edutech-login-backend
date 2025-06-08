@@ -14,25 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-//@RestController
-//@RequestMapping("/api/exams")
-//public class ExamController {
-//
-//    @GetMapping("/{type}/{course}/questions")
-//    public ResponseEntity<List<QuestionRequest>> getExamQuestions(@PathVariable String type, @PathVariable String course) {
-//        List<QuestionRequest> questions = new ArrayList<>();
-//        for (int i = 1; i <= 20; i++) {
-//            QuestionRequest q = new QuestionRequest();
-//            q.setId(i);
-//            q.setText("Sample question " + i + " for course " + course);
-//            q.setOptions(Arrays.asList("Option A", "Option B", "Option C", "Option D"));
-//            questions.add(q);
-//        }
-//        return ResponseEntity.ok(questions);
-//    }
-//
-//
-//}
 
 
 @RestController

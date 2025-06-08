@@ -24,9 +24,9 @@ public class QuestionService {
         int mediumCount = (int) Math.round(totalCount * 0.3);
         int hardCount = totalCount - easyCount - mediumCount;
 
-        List<Question> easyQs = questionRepository.findRandomQuestionsByCourseAndDifficulty(course, "easy", easyCount);
-        List<Question> mediumQs = questionRepository.findRandomQuestionsByCourseAndDifficulty(course, "medium", mediumCount);
-        List<Question> hardQs = questionRepository.findRandomQuestionsByCourseAndDifficulty(course, "hard", hardCount);
+        List<Question> easyQs = questionRepository.findRandomQuestionsByCourseAndDifficulty(course, "Easy", easyCount);
+        List<Question> mediumQs = questionRepository.findRandomQuestionsByCourseAndDifficulty(course, "Medium", mediumCount);
+        List<Question> hardQs = questionRepository.findRandomQuestionsByCourseAndDifficulty(course, "Hard", hardCount);
 
         List<Question> all = new ArrayList<>();
         all.addAll(easyQs);
