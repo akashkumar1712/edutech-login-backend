@@ -10,12 +10,14 @@ import com.SpringBootProject.LoginSignUp.dto.response.UserDtoListResponse;
 import com.SpringBootProject.LoginSignUp.entity.User;
 import com.SpringBootProject.LoginSignUp.service.UsersManagementService;
 import com.SpringBootProject.LoginSignUp.utils.ApiResponse;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -23,12 +25,13 @@ import java.util.List;
 @RestController
 @CrossOrigin(origins = "*")
 @Slf4j
+@Validated
 public class UserManagementController {
     @Autowired
     private UsersManagementService usersManagementService;
 
     @PostMapping("/auth/register")
-    public ApiResponse<String> register(@RequestBody RegistrationRequest reg){
+    public ApiResponse<String> register(@Valid @RequestBody RegistrationRequest reg){
         log.info("Started registering......");
         return usersManagementService.register(reg);
     }
